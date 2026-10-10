@@ -1,0 +1,1 @@
+{"name":"arc-receipt","version":"0.1.0","private":true,"type":"module","scripts":{"test":"node --test","demo":"node cli.mjs demo","health":"node --use-system-ca cli.mjs health"},"engines":{"node":">=24"}}

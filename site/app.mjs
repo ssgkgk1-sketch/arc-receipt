@@ -1,0 +1,7 @@
+import {verify,summarize} from './receipt.mjs';
+import {fixture,options} from './demo.mjs';
+const $=id=>document.getElementById(id);let report;
+function show(r){report=r;$('status').textContent=(r.mode?'SYNTHETIC EXAMPLE / ':'')+r.status;$('output').textContent=JSON.stringify(r,null,2);$('download').disabled=false;}
+$('demo').onclick=()=>show({mode:'SYNTHETIC_NOT_ONCHAIN',...summarize(fixture(),options)});
+$('form').onsubmit=async e=>{e.preventDefault();$('verify').disabled=true;$('demo').disabled=true;$('download').disabled=true;report=null;$('status').textContent='Checking Arc…';$('output').textContent='';try{show({mode:'LIVE_RPC',...await verify({txHash:$('tx').value.trim(),recipient:$('recipient').value.trim(),amount:$('amount').value.trim(),...($('sender').value.trim()?{sender:$('sender').value.trim()}:{})})});}catch(err){$('status').textContent='Unable to verify';$('output').textContent=err.message+'\nNo payment has been accepted. Retry later or use the CLI if the RPC blocks browser requests.';}finally{$('verify').disabled=false;$('demo').disabled=false;}};
+$('download').onclick=()=>{if(!report)return;const blob=new Blob([JSON.stringify(report,null,2)+'\n'],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=report.mode==='LIVE_RPC'?'arc-receipt.json':'arc-receipt-SYNTHETIC.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
