@@ -1,0 +1,9 @@
+# Deployment and submission recheck
+
+Rechecked 2026-10-11 KST. Circle's https://www.circle.com links to https://www.arc.io; Arc's official community page lists Arc Microgrants. The DoraHacks program description and its required fields were retrieved directly from https://dorahacks.io/hackathon/arc-microgrants/detail. These checks support the program/domain attribution; they do not guarantee award, organizer decisions, or the safety of every future link or wallet request.
+
+Two official-documented RPC endpoints (rpc.mainnet.arc.io and rpc.drpc.mainnet.arc.io) returned the same successful receipt for 0x4fa411a5be33bbf91f0be1b2fcbf48fa6f06af30ed0eb52125466095613b048f. Chain 5042. Created contract 0xb7477307e1333af78d0adcb19c26a2a5528cb28b. Value zero. Creation input and runtime bytecode matched the local build exactly. Gas used 152889; effectiveGasPrice 20000001153; fee 0.003057780176281017 USDC. No transfer of principal or token allowance was requested by this creation transaction. This does not audit unrelated wallet history, signatures, approvals, browser extensions or devices.
+
+The old wallet server is stopped. Disconnect its localhost origin manually in Rabby. The public docs/ website is read-only, excludes the wallet utility, and has no wallet/signing API. Its RPC Origin was accepted by the official endpoint's CORS response. Node tests: 25 pass. Solidity tests: 6 pass, including 256 fuzz cases. Browser automation failed to initialize due to a host sandbox helper error, so an actual rendered browser smoke test is not claimed.
+
+Application has NOT been submitted. Public code and draft are prepared. Required declarations about earlier Arc deployments and any Circle/Arc funding outside this workflow must be answered by the applicant. Email is intentionally not committed. Submission must occur in the applicant's authenticated DoraHacks session, with truthful answers. A transaction alone is not a grant application.
