@@ -35,7 +35,7 @@ Uses the official public RPC over HTTPS. The RPC operator sees requested hashes 
 
 ## Grant status
 
-Contract deployed by the user; grant NOT submitted and NO grant secured. Contact information and accurate applicant history must be completed in the official form. Mainnet signatures belong to the user. Do not enter seed phrases or keys. No further spending is necessary for the read-only checker. Build static checker with `node build-site.mjs`; publish docs/ only, never the local deployment UI.
+Contract deployed by the user. On 2026-10-11 KST, the user showed DoraHacks "Build Submitted" confirmation and ArcReceipt marked "Under Review" for Arc Microgrants | Circle. This confirms submission, not selection or funding; no grant has been secured. Mainnet signatures belong to the user. Do not enter seed phrases or keys. No further spending is necessary for the read-only checker. Build static checker with `node build-site.mjs`; publish docs/ only, never the local deployment UI.
 
 AI-assisted implementation: OpenAI / Codex desktop. Exact runtime model identifier not independently verified. No paid API used by this project.
 

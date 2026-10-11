@@ -1,4 +1,6 @@
-# Arc Microgrants submission draft — not submitted
+# Arc Microgrants submission reference — submitted, under review
+
+On 2026-10-11 KST, the user showed DoraHacks confirmation for ArcReceipt and a build card marked "Under Review". This file preserves the prepared application text; it does not independently verify every form field or claim an award.
 
 Project name: ArcReceipt
 
